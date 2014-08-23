@@ -1,4 +1,9 @@
 main_site
 =========
 
-Milkdogdesign.com / Chrismielke.com
+The code for Milkdogdesign.com / Chrismielke.com.
+
+It uses the following: 
+* Bootstrap
+* jQuery
+* AngularJS 
