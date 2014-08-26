@@ -1,4 +1,11 @@
 /* Custom styles */
+
+.item-image-wrapper {
+	height: 140px;
+	width: 100%;
+	overflow: hidden;
+}
+
 .name-banner {
 	text-indent: -9999px;
 	height: 60px;
@@ -20,8 +27,21 @@
 
 /* Bootstrap overwrites */
 .navbar {
-	background-color: #39C;
+	background-color: #39c;
 	
+}
+
+.navbar-nav>li.active {
+	background-color: #555;
+}
+
+.navbar-nav>li.active>a {
+	color: #fff;
+}
+
+.nav>li.active>a:hover, .nav>li.active>a:focus {
+	background-color: #666;
+	color: #fff;
 }
 
 .navbar-brand, .navbar-nav>li>a {

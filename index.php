@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolio">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,7 +50,7 @@
 			<div class="container">
 				<img class="pull-right" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="height: 180px; width: 180px">
 				<p>
-					Chris Mielke is a web developer with 8+ years of PHP, HTML, CSS experience. Over 4 years of javascript experience using jQuery and learning AngularJS. A background in graphic design and UI/UX experience helps with being a creative, problem solving frontend and fullstack developer.
+					<strong>Chris Mielke</strong> is a web developer with 8+ years of PHP, HTML, CSS experience. Over 4 years of javascript experience using jQuery and learning AngularJS. A background in graphic design and UI/UX experience helps with being a creative, problem solving frontend and fullstack developer.
 				</p>
 				<p>
 					<a class="btn btn-primary btn-lg" role="button" href="/resume/Chris-Mielke-Resume.pdf">Download Resume <span class="glyphicon glyphicon-cloud-download"></span></a>
@@ -58,56 +58,19 @@
 			</div>
 		</div>
 
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-3">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style=" height: 140px; width: 100%;">
-					<h2>Heading</h2>
+		<div class="container-fluid" ng-controller="portfolioController as portfolio">
+
+			<div class="row" ng-repeat="row in portfolio.rows">
+				<div class="col-md-3" ng-repeat="item in row">
+					<div class="item-image-wrapper">
+						<img ng-src="{{item.thumb}}" alt="{{item.name}}" style=" height: auto; width: 100%;">
+					</div>
+					<h2>{{item.name}}</h2>
 					<p>
-						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+						{{item.description}}
 					</p>
 					<p>
-						<a class="btn btn-default" href="#" role="button">View details &raquo;</a>
-					</p>
-				</div>
-				<div class="col-md-3">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style=" height: 140px; width: 100%;">
-					<h2>Heading</h2>
-					<p>
-						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					</p>
-					<p>
-						<a class="btn btn-default" href="#" role="button">View details &raquo;</a>
-					</p>
-				</div>
-				<div class="col-md-3">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style=" height: 140px; width: 100%;">
-					<h2>Heading</h2>
-					<p>
-						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					</p>
-					<p>
-						<a class="btn btn-default" href="#" role="button">View details &raquo;</a>
-					</p>
-				</div>
-				<div class="col-md-3">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style=" height: 140px; width: 100%;">
-					<h2>Heading</h2>
-					<p>
-						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					</p>
-					<p>
-						<a class="btn btn-default" href="#" role="button">View details &raquo;</a>
-					</p>
-				</div>
-				<div class="col-md-3">
-					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style=" height: 140px; width: 100%;">
-					<h2>Heading</h2>
-					<p>
-						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					</p>
-					<p>
-						<a class="btn btn-default" href="#" role="button">View details &raquo;</a>
+						<a class="btn btn-default" href="{{item.link}}" role="button" target="_blank">View details &raquo;</a>
 					</p>
 				</div>
 
@@ -126,5 +89,6 @@
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/ng-portfolio.js"></script>
 	</body>
 </html>
