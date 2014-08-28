@@ -20,6 +20,10 @@ function fixData(&$value, $key) {
 			$value = str_replace('_t.jpg', '.jpg', $value);
 		}
 	}
+	
+	if ($key == 'description') {
+		$value = nl2br($value);
+	}
 }
 
 try {

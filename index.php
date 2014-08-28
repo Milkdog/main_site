@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="portfolio">
+<html lang="en" ng-app="portfolioApp">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -66,9 +66,7 @@
 						<img ng-src="{{item.thumb}}" alt="{{item.name}}" style=" height: auto; width: 100%;">
 					</div>
 					<h2>{{item.name}}</h2>
-					<p>
-						{{item.description}}
-					</p>
+					<p ng-bind-html="item.description"></p>
 					<p>
 						<a class="btn btn-default" href="{{item.link}}" role="button" target="_blank">View details &raquo;</a>
 					</p>
@@ -87,6 +85,7 @@
 		<!-- /container -->
 
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-sanitize.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/ng-portfolio.js"></script>
