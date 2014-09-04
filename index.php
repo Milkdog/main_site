@@ -68,7 +68,7 @@
 					<h2>{{item.name}}</h2>
 					<p ng-bind-html="item.description"></p>
 					<p>
-						<a class="btn btn-default" href="{{item.link}}" role="button" target="_blank">View details &raquo;</a>
+						<a class="btn btn-default" href="{{item.link}}" role="button" target="_blank">View item &raquo;</a>
 					</p>
 				</div>
 
