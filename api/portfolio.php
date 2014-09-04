@@ -28,7 +28,7 @@ function fixData(&$value, $key) {
 
 try {
 	//Gets all of the items on the site
-	$itemsSql = "SELECT `id`, `title`, `description`, `category`, `link`, `thumb`, `flash`, `date`, `int_html`, `int_php`, `int_css`, `int_design`, `int_flash`, `int_3d`, `int_brand`, `int_mysql`, `group`
+	$itemsSql = "SELECT `id`, `title`, `description`, `category`, `link`, `thumb`, `date`
 		FROM site_items
 		WHERE hide = 0
 		ORDER BY date DESC";
