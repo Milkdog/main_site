@@ -39,7 +39,7 @@
 							<a href="https://github.com/Milkdog" target="_blank">GitHub <span class="glyphicon glyphicon-new-window"></span></a>
 						</li>
 						<li>
-							<a href="#contact">Contact</a>
+							<a href='&#109;ailto&#58;chr%69s&#64;mi%6Ck&#100;%6F&#103;desi&#103;n&#46;c&#111;&#109;'>Contact</a>
 						</li>
 					</ul>
 				</div><!--/.nav-collapse -->
@@ -48,7 +48,7 @@
 
 		<div class="jumbotron">
 			<div class="container">
-				<img class="pull-right" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="height: 180px; width: 180px">
+				<img class="pull-right" src="/images/profile.jpg" alt="Chris Mielke" style="height: 160px;">
 				<p>
 					<strong>Chris Mielke</strong> is a web developer with 8+ years of PHP, HTML, CSS experience. Over 4 years of javascript experience using jQuery and learning AngularJS. A background in graphic design and UI/UX experience helps with being a creative, problem solving frontend and fullstack developer.
 				</p>
